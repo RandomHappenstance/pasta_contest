@@ -9,17 +9,17 @@ driver = webdriver.Firefox()
 
 disabled = True
 
-# while disabled:
-# 	url = urllib.urlopen('http://www.pastapass.com')
-# 	soup = BS(url)
-# 	a = soup.find('a', {'id':'ppp'})
-# 	print('disabled' in a['class'])
-# 	if 'disabled' not in a["class"]:
-# 		print('here')
-# 		disabled = False
+while disabled:
+	url = urllib.urlopen('http://www.pastapass.com')
+ 	soup = BS(url)
+ 	a = soup.find('a', {'id':'ppp'})
+ 	print('disabled' in a['class'])
+ 	if 'disabled' not in a["class"]:
+ 		print('here')
+ 		disabled = False
 
-# driver.get('https://www.pastapass.com/')
+driver.get('https://www.pastapass.com/')
 
-# elem = driver.find_element_by_id('ppp')
-# elem.click()
+elem = driver.find_element_by_id('ppp')
+elem.click()
 
